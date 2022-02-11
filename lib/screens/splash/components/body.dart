@@ -1,6 +1,6 @@
+import 'package:e_commerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
-// This is the best practice
 import '../../../constants.dart';
 import '../../../size_config.dart';
 import '../components/splash_content.dart';
@@ -68,11 +68,11 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     const Spacer(flex: 3),
-                    const DefaultButton(
+                    DefaultButton(
                       text: "Continue",
-                      // press: () {
-                      //   Navigator.pushNamed(context, SignInScreen.routeName);
-                      // },
+                      press: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
                     ),
                     const Spacer(),
                   ],
