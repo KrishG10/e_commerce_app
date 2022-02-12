@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../size_config.dart';
@@ -24,9 +23,8 @@ class SocalCard extends StatelessWidget {
         padding: EdgeInsets.all(getProportionateScreenWidth(12)),
         height: getProportionateScreenHeight(40),
         width: getProportionateScreenWidth(40),
-        // ignore: prefer_const_constructors
         decoration: BoxDecoration(
-          color: const Color(0xFFF5F6F9),
+          color: Color(0xFFF5F6F9),
           shape: BoxShape.circle,
         ),
         child: SvgPicture.asset(icon!),

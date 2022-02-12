@@ -1,4 +1,7 @@
+import 'package:e_commerce_app/models/Product.dart';
 import 'package:flutter/material.dart';
+
+import '../../../components/product_card.dart';
 import '../../../size_config.dart';
 import 'section_title.dart';
 
@@ -17,13 +20,17 @@ class PopularProducts extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              // ...List.generate(
-              //  zCard(product: demoProducts[index]);
+              ...List.generate(
+                demoProducts.length,
+                (index) {
+                  if (demoProducts[index].isPopular)
+                    // ignore: curly_braces_in_flow_control_structures
+                    return ProductCard(product: demoProducts[index]);
 
-              //     return SizedBox
-              //         .shrink(); // here by default width and height is 0
-              //   },
-              // ),
+                  return SizedBox
+                      .shrink(); // here by default width and height is 0
+                },
+              ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),

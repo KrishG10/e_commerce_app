@@ -1,8 +1,9 @@
-import 'package:e_commerce_app/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
+// This is the best practice
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import '../../sign_in/sign_in_screen.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 

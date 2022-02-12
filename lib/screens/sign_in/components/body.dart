@@ -4,7 +4,6 @@ import '../../../components/socal_card.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
 
-// ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,13 +25,12 @@ class Body extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                // ignore: prefer_const_constructors
                 Text(
                   "Sign in with your email and password  \nor continue with social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                const SignForm(),
+                SignForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +50,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
-                const NoAccountText(),
+                NoAccountText(),
               ],
             ),
           ),

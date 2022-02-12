@@ -1,18 +1,16 @@
+import 'package:e_commerce_app/screens/login_success/components/body.dart';
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
-
-// ignore: use_key_in_widget_constructors
 class LoginSuccessScreen extends StatelessWidget {
   static String routeName = "/login_success";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const SizedBox(),
-        title: const Text("Login Success"),
+        leading: SizedBox(),
+        title: Text("Login Success"),
       ),
-      body: const Body(),
+      body: Body(),
     );
   }
 }

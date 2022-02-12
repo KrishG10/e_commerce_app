@@ -1,5 +1,3 @@
-// ignore_for_file: import_of_legacy_library_into_null_safe
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,17 +9,17 @@ class FormError extends StatelessWidget {
     required this.errors,
   }) : super(key: key);
 
-  final List<String> errors;
+  final List<String?> errors;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: List.generate(
-          errors.length, (index) => formErrorText(error: errors[index])),
+          errors.length, (index) => formErrorText(error: errors[index]!)),
     );
   }
 
-  Row formErrorText({String? error}) {
+  Row formErrorText({required String error}) {
     return Row(
       children: [
         SvgPicture.asset(
@@ -32,7 +30,7 @@ class FormError extends StatelessWidget {
         SizedBox(
           width: getProportionateScreenWidth(10),
         ),
-        Text(error!),
+        Text(error),
       ],
     );
   }

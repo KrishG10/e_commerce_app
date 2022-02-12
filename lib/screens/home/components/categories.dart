@@ -39,7 +39,7 @@ class CategoryCard extends StatelessWidget {
     required this.press,
   }) : super(key: key);
 
-  final String icon, text;
+  final String? icon, text;
   final GestureTapCallback press;
 
   @override
@@ -55,13 +55,13 @@ class CategoryCard extends StatelessWidget {
               height: getProportionateScreenWidth(55),
               width: getProportionateScreenWidth(55),
               decoration: BoxDecoration(
-                color: const Color(0xFFFFECDF),
+                color: Color(0xFFFFECDF),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: SvgPicture.asset(icon),
+              child: SvgPicture.asset(icon!),
             ),
-            const SizedBox(height: 5),
-            Text(text, textAlign: TextAlign.center)
+            SizedBox(height: 5),
+            Text(text!, textAlign: TextAlign.center)
           ],
         ),
       ),

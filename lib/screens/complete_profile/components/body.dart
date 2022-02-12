@@ -5,8 +5,6 @@ import '../../../size_config.dart';
 import 'complete_profile_form.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,13 +18,12 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.03),
                 Text("Complete Profile", style: headingStyle),
-                // ignore: prefer_const_constructors
                 Text(
                   "Complete your details or continue  \nwith social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.06),
-                const CompleteProfileForm(),
+                CompleteProfileForm(),
                 SizedBox(height: getProportionateScreenHeight(30)),
                 Text(
                   "By continuing your confirm that you agree \nwith our Term and Condition",

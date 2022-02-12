@@ -1,12 +1,10 @@
-import 'package:e_commerce_app/components/default_button.dart';
 import 'package:flutter/material.dart';
 
+import '../../../components/default_button.dart';
 import '../../../size_config.dart';
 import '../../home/home_screen.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,7 +23,7 @@ class Body extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        const Spacer(),
+        Spacer(),
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(
@@ -35,7 +33,7 @@ class Body extends StatelessWidget {
             },
           ),
         ),
-        const Spacer(),
+        Spacer(),
       ],
     );
   }

@@ -1,15 +1,12 @@
-import 'package:e_commerce_app/components/custom_surfix_icon.dart';
-import 'package:e_commerce_app/components/form_error.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../components/default_button.dart';
-import '../../../../constants.dart';
-import '../../../../size_config.dart';
-import '../../../complete_profile/complete_profile_screen.dart';
+import '../../../components/custom_surfix_icon.dart';
+import '../../../components/default_button.dart';
+import '../../../components/form_error.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
+import '../../complete_profile/complete_profile_screen.dart';
 
 class SignUpForm extends StatefulWidget {
-  const SignUpForm({Key? key}) : super(key: key);
-
   @override
   _SignUpFormState createState() => _SignUpFormState();
 }
@@ -18,22 +15,19 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String? email;
   String? password;
-  // ignore: non_constant_identifier_names
   String? conform_password;
   bool remember = false;
-  final List<String> errors = [];
+  final List<String?> errors = [];
 
   void addError({String? error}) {
     if (!errors.contains(error))
-      // ignore: curly_braces_in_flow_control_structures
       setState(() {
-        errors.add(error!);
+        errors.add(error);
       });
   }
 
   void removeError({String? error}) {
     if (errors.contains(error))
-      // ignore: curly_braces_in_flow_control_structures
       setState(() {
         errors.remove(error);
       });
@@ -89,14 +83,13 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      // ignore: prefer_const_constructors
       decoration: InputDecoration(
         labelText: "Confirm Password",
         hintText: "Re-enter your password",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: const CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }
@@ -123,13 +116,12 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        // ignore: prefer_const_constructors
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
@@ -145,7 +137,6 @@ class _SignUpFormState extends State<SignUpForm> {
         } else if (emailValidatorRegExp.hasMatch(value)) {
           removeError(error: kInvalidEmailError);
         }
-        // ignore: avoid_returning_null_for_void
         return null;
       },
       validator: (value) {
@@ -158,14 +149,13 @@ class _SignUpFormState extends State<SignUpForm> {
         }
         return null;
       },
-      // ignore: prefer_const_constructors
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: const CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
     );
   }

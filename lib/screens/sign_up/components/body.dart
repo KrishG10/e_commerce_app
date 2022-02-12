@@ -1,11 +1,10 @@
-import 'package:e_commerce_app/components/socal_card.dart';
-import 'package:e_commerce_app/constants.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../size_config.dart';
+import '../../../components/socal_card.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 import 'sign_up_form.dart';
 
-// ignore: use_key_in_widget_constructors
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,13 +19,11 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
                 Text("Register Account", style: headingStyle),
-                // ignore: prefer_const_constructors
                 Text(
                   "Complete your details or continue \nwith social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                // ignore: prefer_const_constructors
                 SignUpForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
                 Row(
